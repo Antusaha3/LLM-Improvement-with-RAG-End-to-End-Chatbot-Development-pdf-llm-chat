@@ -17,39 +17,20 @@ pip install -r requirements.txt
 ```
 
 ### 2. Setup LLM Provider
-
-#### Option A: Ollama (Local - Free)
-
+#### : Ollama (Local - Free)
 Install Ollama (Windows):
 https://ollama.com/download/windows
-
 Verify installation:
-
 ollama --version
-
-
 Start Ollama (may already be running on Windows):
-
 ollama serve
-
-
 Pull a model:
-
 ollama pull qwen2.5:1.5b
-
-
 List models:
-
 ollama list
-
-
 Test model:
-
 ollama run qwen2.5:1.5b
-
-
 Ollama API:
-
 http://localhost:11434
 ```
 
@@ -71,25 +52,6 @@ Open http://localhost:8501 in your browser.
 ---
 
 ## Command Line Options
-
-```bash
-python run_app.py --help
-```
-
-| Argument | Short | Default | Description |
-|----------|-------|---------|-------------|
-| `--provider` | `-p` | `ollama` | LLM provider: `ollama` or `azure` |
-| `--model` | `-m` | `qwen2.5:1.5b` | Ollama model name |
-| `--ollama-url` | | `http://localhost:11434` | Ollama base URL |
-| `--api-key` | | from .env | Azure OpenAI API key |
-| `--endpoint` | | from .env | Azure OpenAI endpoint |
-| `--deployment` | `-d` | `gpt-4` | Azure deployment name |
-| `--temperature` | `-t` | `0.7` | LLM temperature |
-| `--port` | | `8501` | Streamlit port |
-| `--check` | | | Validate config only |
-
-### Examples
-
 ```bash
 # Check configuration without starting
 python run_app.py --check
@@ -106,6 +68,24 @@ python run_app.py --provider azure --deployment gpt-4-turbo
 # Run on different port
 python run_app.py --port 8502
 ```
+```bash
+python run_app.py --help
+```
+| Argument      | Default                                          | Description                   |
+| ------------- | ------------------------------------------------ | ----------------------------- |
+| --provider    | ollama                                           | LLM provider: ollama or azure |
+| --model       | qwen2.5:1.5b                                     | Ollama model                  |
+| --ollama-url  | [http://localhost:11434](http://localhost:11434) | Ollama base URL               |
+| --api-key     | from .env                                        | Azure OpenAI API ke         |
+| --endpoint    | from .env                                        | Azure OpenAI endpoint         |
+| --deployment  | gpt-4                                            | Azure deployment name         |
+| --temperature | 0.7                                              | LLM temperature               |
+| --port        | 8501                                             | Streamlit port                |
+| --check       |                                                  | Validate config only          |
+
+### Examples
+
+
 
 ---
 
@@ -234,5 +214,6 @@ python run_app.py --port 8502
 ## License
 
 MIT License
+
 
 
