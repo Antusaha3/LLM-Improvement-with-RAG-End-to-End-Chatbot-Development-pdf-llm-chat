@@ -1,7 +1,6 @@
 # RAG Chatbot with Ollama & Azure OpenAI
 
-A modular RAG (Retrieval-Augmented Generation) chatbot that supports both **Ollama (local)** and **Azure OpenAI (cloud)** as LLM providers.
-
+A modular RAG (Retrieval-Augmented Generation) chatbot that supports both **Ollama (local)**  as LLM providers.
 ---
 
 ## Quick Start
@@ -21,26 +20,37 @@ pip install -r requirements.txt
 
 #### Option A: Ollama (Local - Free)
 
-```bash
-# Start Ollama with Docker
-docker run -d --name ollama -p 11434:11434 -v ollama:/root/.ollama ollama/ollama
+Install Ollama (Windows):
+https://ollama.com/download/windows
 
-# Pull a model
-docker exec ollama ollama pull qwen2.5:1.5b
-```
+Verify installation:
 
-#### Option B: Azure OpenAI (Cloud)
+ollama --version
 
-Create a `.env` file:
-```bash
-cp .env.example .env
-```
 
-Edit `.env` with your Azure credentials:
-```env
-AZURE_OPENAI_API_KEY=your-api-key
-AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-AZURE_LLM_DEPLOYMENT_NAME=gpt-4
+Start Ollama (may already be running on Windows):
+
+ollama serve
+
+
+Pull a model:
+
+ollama pull qwen2.5:1.5b
+
+
+List models:
+
+ollama list
+
+
+Test model:
+
+ollama run qwen2.5:1.5b
+
+
+Ollama API:
+
+http://localhost:11434
 ```
 
 ### 3. Run the Application
@@ -224,4 +234,5 @@ python run_app.py --port 8502
 ## License
 
 MIT License
+
 
