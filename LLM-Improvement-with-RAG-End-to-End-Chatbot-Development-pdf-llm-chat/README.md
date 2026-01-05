@@ -1,6 +1,8 @@
 # RAG Chatbot with Ollama & Azure OpenAI
 
-A modular RAG (Retrieval-Augmented Generation) chatbot that supports both **Ollama** (local) and **Azure OpenAI** (cloud) as LLM providers.
+A modular RAG (Retrieval-Augmented Generation) chatbot that supports both **Ollama (local)** and **Azure OpenAI (cloud)** as LLM providers.
+
+---
 
 ## Quick Start
 
@@ -222,3 +224,4 @@ python run_app.py --port 8502
 ## License
 
 MIT License
+
