@@ -1,4 +1,4 @@
-# RAG Chatbot with Ollama & Azure OpenAI
+# RAG Chatbot with Ollama 
 
 A modular RAG (Retrieval-Augmented Generation) chatbot that supports both **Ollama (local)**  as LLM providers.
 ---
